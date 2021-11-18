@@ -25,7 +25,7 @@ a given item is a directory or a file, can you return a list of only the files?
 Determines whether or not the given argument is a directory.
 
 ```typescript
-isDirectory('root/') // true
+isDirectory({name: 'root/', contents: []}) // true
 isDirectory('001.jpg') // false
 ```
 
@@ -34,7 +34,7 @@ isDirectory('001.jpg') // false
 Determines whether or not the given argument is a file.
 
 ```typescript
-isFile('root/') // false
+isFile({name: 'root/', contents: []}) // false
 isFile('001.jpg') // true
 ```
 
