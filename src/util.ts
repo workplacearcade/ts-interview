@@ -4,6 +4,7 @@ export interface Directory {
   contents: Contents[]
 }
 
+export const isFile = (input: Contents): input is string =>
+  typeof input === 'string'
 export const isDirectory = (input: Contents): input is Directory =>
-  input instanceof Array
-export const isFile = (input: Contents): input is string => !isDirectory(input)
+  !isFile(input)

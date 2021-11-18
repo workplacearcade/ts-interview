@@ -32,24 +32,20 @@ const example: Directory = {
 describe('isFile', () => {
   it('recognizes a file properly', () => {
     expect(isFile('test.txt')).toBe(true)
-    expect(isFile(example[1][0][1][1])).toBe(true)
   })
 
   it('recognizes a directory properly', () => {
-    expect(isFile(['the good files/', []])).toBe(false)
-    expect(isFile(example)).toBe(false)
+    expect(isFile({name: 'the good files/', contents: []})).toBe(false)
   })
 })
 
 describe('isDirectory', () => {
   it('recognizes a file properly', () => {
     expect(isDirectory('test.txt')).toBe(false)
-    expect(isDirectory(example[1][0][1][0])).toBe(false)
   })
 
   it('recognizes a directory properly', () => {
-    expect(isDirectory(['the good files/', []])).toBe(true)
-    expect(isDirectory(example)).toBe(true)
+    expect(isDirectory({name: 'the good files/', contents: []})).toBe(true)
   })
 })
 
