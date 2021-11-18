@@ -1,5 +1,5 @@
-import type {Directory} from './stubs'
-import {directory, isFile, isDirectory} from './stubs'
+import type {Contents, Directory} from './util'
+import {isFile, isDirectory} from './util'
 
 const deepDive = (directory: Directory): string[] => []
 
